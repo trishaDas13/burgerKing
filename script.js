@@ -16,6 +16,10 @@ btn.addEventListener('click', (e) =>{
         alert("Please select a food item to order");
         return;
     }
+    if(foodItem.length >= 2){
+        alert("You can select only one item at a time");
+        return;
+    }
     //! >>>>>> Promise part <<<<<<<
     btn.disabled = true;
     let myPromise = new Promise(function(resolve, reject){
@@ -34,7 +38,10 @@ btn.addEventListener('click', (e) =>{
                 foods.src = "https://www.recipetineats.com/wp-content/uploads/2022/09/Fries-with-rosemary-salt_1.jpg";
                 break;
                 case "drinks" : 
-                foods.src = "https://www.thespruceeats.com/thmb/iHmC1x1UNWoq4GP4i_81-xajw5g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/popular-screwdriver-variations-759820-hero-01-6f67f02622a54bbb8aeabd7eb65bb3a0.jpg"
+                foods.src = "https://as2.ftcdn.net/v2/jpg/02/25/30/31/1000_F_225303115_kLBQppB2z3PmQYXzpaqmnUm2VVrxcuyD.jpg"
+                break;
+                case "combo" :
+                foods.src = "https://media.istockphoto.com/id/533712416/photo/cheeseburger-with-drink-of-cola-and-french-fries-red-spotlight.jpg?s=612x612&w=0&k=20&c=L5CCSzIVNwMVocrdqeYhuJtEJhBQy_krZ9v29KNMaAQ="
                 break;
             }
             foods.style.display = "inline-block";

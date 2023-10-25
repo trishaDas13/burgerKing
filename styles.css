@@ -19,11 +19,13 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 input{
     margin-right: 8rem;
     margin-left: 1rem;
     accent-color: rgb(225, 170, 116);
+    cursor: pointer;
 }
 label{
     color: white;
@@ -43,7 +45,6 @@ p{
 img{
     display: none;
     margin: 3rem;
-    
 }
 
 button {
